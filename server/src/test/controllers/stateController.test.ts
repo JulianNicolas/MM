@@ -65,7 +65,22 @@ describe("StateController", () => {
 
 		})
 
-		it("should return error. The key must not be empty", (done) => {
+		it("should return error - The key type must be string", (done) => {
+
+			const query = { key: {myKey:12} };
+
+			chai.request(server)
+            .get('/api/state')
+			.query( query )
+            .end((err, res) => {
+				expect(res).to.have.status(400);
+				expect(res.body.message).be.equal('The key type must be string');
+              	done();
+            });
+
+		})
+
+		it("should return error - The key must not be empty", (done) => {
 
 			const query = { key: '' };
 

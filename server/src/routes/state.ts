@@ -7,7 +7,7 @@ const router = Router();
 
 router.get('/', 
     query('key', 'The key must not be empty').not().isEmpty(),
-    query('key', 'The key must not be empty').isString(),
+    query('key', 'The key type must be string').isString(),
     validate.validateFields,
     StateController.fetchOne
 );
