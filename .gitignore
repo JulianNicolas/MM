@@ -1,0 +1,11 @@
+# compiled output
+server/dist
+
+# dependencies
+server/node_modules
+
+# IDE - VSCode
+.vscode/*
+
+# System Files
+.DS_Store

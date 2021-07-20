@@ -1,0 +1,17 @@
+version: '2'
+services:
+
+### Mysql container
+  mysql:
+    image: mysql:8.0.22
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mediaMonks
+      MYSQL_USER: shulian   
+      MYSQL_PASSWORD: 8Hcauypj4amAd8jE6tPk
+      MYSQL_ROOT_HOST: '%'
+    container_name: "mysql_mm"

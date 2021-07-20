@@ -1,0 +1,8 @@
+<h3>Search States</h3>
+{{#if error}} <span>{{error}}</span>{{/if}}
+<form class="form-inline" method="GET" action="/api/state">
+  <div class="form-group">
+    <input type="text" name="key" class="form-control" placeholder="Search state by key">
+  </div>
+  <input type="submit" class="btn btn-primary mt-2" value="Search">
+</form>
